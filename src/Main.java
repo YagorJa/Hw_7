@@ -27,5 +27,13 @@ public class Main {
             sumP += figure.getPerimetr();
         }
         System.out.println("Сумма всех периметров: "+sumP);
+        
+        try {
+            Student original = new Student("Егор");
+            Student clone = (Student) original.clone();
+            System.out.println(clone.name);
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
     }
 }
